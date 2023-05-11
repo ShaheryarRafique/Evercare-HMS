@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- prescriptions23:21-->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <link rel="shortcut icon" type="image/x-icon" href="/internallcss/assets/img/favicon.ico">
+    <title>View Prescription</title>
+    <link rel="stylesheet" type="text/css" href="/internallcss/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/internallcss/assets/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="/internallcss/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/internallcss/assets/css/style.css">
+
+</head>
+
+<body>
+    <div class="main-wrapper">
+        {{>header }}
+        <div class="page-wrapper">
+            <div class="content">
+                {{#if message}}
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong>Success!</strong>
+                    {{message}}.
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                {{/if}}
+                <div class="row">
+                    <div class="col-sm-5 col-5">
+                        <h4 class="page-title">Prescription</h4>
+                    </div>
+                    <div class="col-sm-7 col-7 text-right m-b-30">
+                        <a href="/addPrescription" class="btn btn-primary btn-rounded"><i class="fa fa-plus"></i> Add
+                            Prescription</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table class="table table-striped custom-table mb-0 datatable">
+                                <thead>
+                                    <tr>
+                                        <th>Presc_Id</th>
+                                        <th>Presc Date</th>
+                                        <th>Description</th>
+                                        <th>Patient_Id</th>
+                                        <th>Doctor_Id</th>
+                                        <th>Appt_Id</th>
+                                        <th class="text-right">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {{#each presc}}
+                                    <tr>
+                                        <td>{{presc_id}}</td>
+                                        <td>{{prescriptionDate}}</td>
+                                        <td>{{description}}</td>
+                                        <td>{{patient_id}}</td>
+                                        <td>{{doctor_id}}</td>
+                                        <td>{{Appointment_id}}</td>
+                                        <td class="text-right">
+                                            <div class="dropdown dropdown-action">
+                                                <form action="/api/v1/prescriptions/{{presc_id}}" method="post"><button
+                                                        class="dropdown-item"><i class="fa fa-pencil m-r-5"></i>
+                                                        Edit</button></form>
+                                                <form action="/api/v1/prescriptions/delete/{{presc_id}}" method="post">
+                                                    <button class="dropdown-item"><i class="fa fa-pencil m-r-5"></i>
+                                                        Delete</button></form>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    {{/each}}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar-overlay" data-reff=""></div>
+    <script src="/internallcss/assets/js/jquery-3.2.1.min.js"></script>
+    <script src="/internallcss/assets/js/popper.min.js"></script>
+    <script src="/internallcss/assets/js/bootstrap.min.js"></script>
+    <script src="/internallcss/assets/js/jquery.dataTables.min.js"></script>
+    <script src="/internallcss/assets/js/dataTables.bootstrap4.min.js"></script>
+    <script src="/internallcss/assets/js/jquery.slimscroll.js"></script>
+    <script src="/internallcss/assets/js/app.js"></script>
+</body>
+
+
+<!-- prescription23:21-->
+
+</html>

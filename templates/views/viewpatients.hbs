@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- patients23:17-->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <link rel="shortcut icon" type="image/x-icon" href="/internallcss/assets/img/favicon.ico">
+    <title>View Patients</title>
+    <link rel="stylesheet" type="text/css" href="/internallcss/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/internallcss/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/internallcss/assets/css/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="/internallcss/assets/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="/internallcss/assets/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="/internallcss/assets/css/style.css">
+    <!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.min.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+    <div class="main-wrapper">
+
+        {{>header}}
+        <div class="page-wrapper">
+            <div class="content">
+                <div class="row">
+                    <div class="col-sm-4 col-3">
+                        <h4 class="page-title">Patients</h4>
+                    </div>
+                    <div class="col-sm-8 col-9 text-right m-b-20">
+                        <a href="/addPatient" class="btn btn btn-primary btn-rounded float-right"><i
+                                class="fa fa-plus"></i> Add Patient</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table class="table table-border table-striped custom-table datatable mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>P.Id</th>
+                                        <th>Name</th>
+                                        <th>DOB</th>
+                                        <th>Address</th>
+                                        <th>Phone</th>
+                                        <th>Email</th>
+                                        <th>Sickness</th>
+                                        <th class="text-right">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    {{#each patient}}
+                                    <tr>
+                                        <td>{{patient_id}}</td>
+                                        <td> {{name}}</td>
+                                        <td>{{dateOfBirth}}</td>
+                                        <td>{{address}}</td>
+                                        <td>{{phone}}</td>
+                                        <td>{{email}}</td>
+                                        <td>{{sickness}}</td>
+                                        <td class="text-right">
+                                            <div class="dropdown dropdown-action">
+
+                                                <form action="/api/v1/patients/{{patient_id}}" method="post"><button
+                                                        class="dropdown-item"><i class="fa fa-pencil m-r-5"></i>
+                                                        Edit</button></form>
+                                                <form action="/api/v1/patients/delete/{{patient_id}}" method="post">
+                                                    <button class="dropdown-item"><i class="fa fa-pencil m-r-5"></i>
+                                                        Delete</button></form>
+                                                
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    {{/each}}
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar-overlay" data-reff=""></div>
+    <script src="/internallcss/assets/js/jquery-3.2.1.min.js"></script>
+    <script src="/internallcss/assets/js/popper.min.js"></script>
+    <script src="/internallcss/assets/js/bootstrap.min.js"></script>
+    <script src="/internallcss/assets/js/jquery.slimscroll.js"></script>
+    <script src="/internallcss/assets/js/select2.min.js"></script>
+    <script src="/internallcss/assets/js/jquery.dataTables.min.js"></script>
+    <script src="/internallcss/assets/js/dataTables.bootstrap4.min.js"></script>
+    <script src="/internallcss/assets/js/moment.min.js"></script>
+    {{!-- <script src="/internallcss/assets/js/bootstrap-datetimepicker.min.js"></script> --}}
+    <script src="/internallcss/assets/js/app.js"></script>
+</body>
+
+
+<!-- patients23:19-->
+
+</html>

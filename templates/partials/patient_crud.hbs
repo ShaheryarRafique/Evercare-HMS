@@ -1,0 +1,73 @@
+<div class="row">
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label class="form-label require">Name <span class="text-danger">*</span></label>
+            <input class="form-control" type="text" name="name" value="{{this.name}}" required>
+        </div>
+    </div>
+
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label class="form-label require">Email <span class="text-danger">*</span></label>
+            <input class="form-control" type="email" name="email" value="{{this.email}}" required>
+        </div>
+    </div>
+
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label>Password <span class="text-danger">*</span></label>
+            <input class="form-control" type="password" name="password" required maxlength="20" minlength="5">
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label>Confirm Password <span class="text-danger">*</span></label>
+            <input class="form-control" type="password" name="Confirmpassword" required maxlength="20" minlength="5">
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label>Sickness <span class="text-danger">*</span></label>
+            <input class="form-control" type="text" name="Sickness" required>
+        </div>
+    </div>
+    
+    <div class="col-sm-6">
+        <label>Gender<span class="text-danger">*</span></label>
+        <div class="form-group">
+            <select class="form-control" name="gender" value="{{this.gender}}" required >
+                <option>-- Choose Gender --</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Others</option>
+            </select>
+        </div>
+
+    </div>
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label>Date of Birth</label>
+           
+                <input type="date" class="form-control" name="date" required>
+            
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label class="form-label require">Phone </label>
+            <input class="form-control" type="text" name="phone" minlength="11" maxlength="15" required>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label>Registration Date</label>
+            
+                <input type="date" name="registration" class="form-control" placeholder="" required>
+            
+        </div>
+    </div>
+</div>
+<div class="form-group">
+    <label>Address</label>
+    <textarea class="form-control" rows="3" cols="30" name="address"></textarea>
+</div>

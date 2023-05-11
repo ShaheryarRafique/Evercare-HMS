@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- edit-room24:07-->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <link rel="shortcut icon" type="image/x-icon" href="/internallcss/assets/img/favicon.ico">
+    <title>Edit Rooms</title>
+    <link rel="stylesheet" type="text/css" href="/internallcss/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/internallcss/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/internallcss/assets/css/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="/internallcss/assets/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="/internallcss/assets/css/style.css">
+
+</head>
+
+<body>
+    <div class="main-wrapper">
+
+        {{>header}}
+
+        <div class="page-wrapper">
+            <div class="content">
+                {{#if message}}
+                <div class="alert alert-{{replace}} alert-dismissible fade show" role="alert">
+                    <strong>{{statuses}} !</strong>
+                    {{message}}.
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                {{/if}}
+                <div class="row">
+                    <div class="col-lg-8 offset-lg-2">
+                        <h4 class="page-title">Edit Room</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8 offset-lg-2">
+                        {{#each room}}
+                        <form action="/api/v1/rooms/update/{{this.room_id}}" method="post">
+                            {{>room_update}}
+                            <div class="m-t-20 text-center">
+                                <button class="btn btn-primary submit-btn">Update Room</button>
+                            </div>
+                        </form>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar-overlay" data-reff=""></div>
+    <script src="/internallcss/assets/js/jquery-3.2.1.min.js"></script>
+    <script src="/internallcss/assets/js/popper.min.js"></script>
+    <script src="/internallcss/assets/js/bootstrap.min.js"></script>
+    <script src="/internallcss/assets/js/jquery.slimscroll.js"></script>
+    <script src="/internallcss/assets/js/select2.min.js"></script>
+    <script src="/internallcss/assets/js/moment.min.js"></script>
+    <script src="/internallcss/assets/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="/internallcss/assets/js/app.js"></script>
+</body>
+
+
+<!-- edit-room24:07-->
+
+</html>

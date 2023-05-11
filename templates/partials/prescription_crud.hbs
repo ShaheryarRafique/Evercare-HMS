@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="col-md-6">
+        <div class="form-group">
+            <label>Patient ID</label>
+            <input class="form-control" type="text" value="{{this.patient_id}}" name="pat_id" required>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="form-group">
+            <label>Doctor ID</label>
+            <input class="form-control" type="text" value="{{this.doctor_id}}" name="doc_id" required>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="form-group">
+            <label>Appointment ID</label>
+            <input class="form-control" type="text" value="{{this.Appointment_id}}" name="app_id" required>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="form-group">
+            <label>Prescription Date</label>
+            <input type="date" class="form-control" value="{{this.prescriptionDate}}" name="date" required>
+        </div>
+    </div>
+
+</div>
+<div class="form-group">
+    <label>Description</label>
+    <textarea class="form-control" rows="3" cols="30" name="description">{{this.description}}</textarea>
+</div>

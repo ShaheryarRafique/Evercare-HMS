@@ -1,0 +1,42 @@
+<div class="row">
+
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label class="form-label require">Room Name <span class="text-danger">*</span></label>
+            <input class="form-control" type="text" name="name" value="{{this.name}}" required>
+        </div>
+    </div>
+
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label class="form-label require">Room Type <span class="text-danger">*</span></label>
+            <input class="form-control" type="text" name="type" value="{{this.roomType}}" required>
+        </div>
+    </div>
+
+<div class="col-md-6">
+    <div class="form-group">
+        <label>Doctor ID <span class="text-danger">*</span></label>
+        <input class="form-control" type="text" value="{{this.doctor_id}}" name="doc_id" required>
+    </div>
+</div>
+
+<div class="col-md-6">
+    <div class="form-group">
+        <label>Department ID <span class="text-danger">*</span></label>
+        <input class="form-control" type="text" value="{{this.Dept_id}}" name="dept_id" required>
+    </div>
+</div>
+
+    <div class="col-sm-6">
+        <label>Avaliability Status <span class="text-danger">*</span></label>
+        <div class="form-group">
+            <select class="form-control" name="status" value="{{this.avaliabilityStatus}}" required>
+                <option>-- Choose Status --</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+        </div>
+    </div>
+
+</div>

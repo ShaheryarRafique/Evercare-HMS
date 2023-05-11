@@ -1,0 +1,36 @@
+<div class="row">
+
+
+    <div class="col-md-6">
+        <div class="form-group">
+            <label>Appointment ID <span class="text-danger">*</span></label>
+            <input class="form-control" type="text" value="{{this.Appointment_id}}" name="appt_id" disabled>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="form-group">
+            <label>Patient ID</label>
+            <input class="form-control" type="text" value="{{this.patient_id}}" name="pat_id" required>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="form-group">
+            <label>Doctor ID</label>
+            <input class="form-control" type="text" value="{{this.doctor_id}}" name="doc_id" required>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="form-group">
+            <label>Appointment Date</label>
+            <input type="date" class="form-control" value="{{this.appointmentDate}}" name="date" required>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label>Fee<span class="text-danger">*</span></label>
+            <input class="form-control" type="number" name="salary" value="{{this.fee}}" required>
+        </div>
+    </div>
+</div>

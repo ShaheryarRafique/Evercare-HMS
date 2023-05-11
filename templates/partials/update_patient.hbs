@@ -1,0 +1,33 @@
+<div class="row">
+    
+    <div class="col-md-6">
+        <div class="form-group">
+            <label>Patient ID <span class="text-danger">*</span></label>
+            <input class="form-control" type="text" value="{{this.patient_id}}" name="pat_id" disabled>
+        </div>
+    </div>
+
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label>Name <span class="text-danger">*</span></label>
+            <input class="form-control" type="text" name="name" value="{{this.name}}" required>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label>Sickness <span class="text-danger">*</span></label>
+            <input class="form-control" type="text" name="Sickness" value="{{this.sickness}}" required>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label>Phone </label>
+            <input class="form-control" type="text" name="phone" minlength="11" maxlength="15" value="{{this.phone}}"
+                required>
+        </div>
+    </div>
+</div>
+<div class="form-group">
+    <label>Address</label>
+    <textarea class="form-control" rows="3" cols="30" name="address">{{this.address}}</textarea>
+</div>
