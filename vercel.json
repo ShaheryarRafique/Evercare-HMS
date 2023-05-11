@@ -1,5 +1,5 @@
 {
-    "version": "2",
+    "version": 2,
     "builds": [
         {
           "src": "server.js",
@@ -11,5 +11,12 @@
           "src": "/(.*)",
           "dest": "/app.js"
         }
-      ]
+      ],
+      "env": {
+        "DATABASE": "evercarehospital",
+        "USER": "root",
+        "PASSWORD": "password",
+        "JWT_SECRET": "my_super_secret_password_shaheryar_rafique",
+        "JWT_EXPIRE": "1h"
+      }
 }
