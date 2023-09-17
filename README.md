@@ -20,10 +20,6 @@
 
 Welcome to the Evercare HMS (Hospital Management System) project, a testament to efficient hospital management and patient care. As a Full Stack Developer, I am thrilled to present this project as a part of my portfolio.
 
-<p align="center">
-  <img src="https://your-website.com/hms-screenshot.png" alt="Evercare HMS Screenshot">
-</p>
-
 ---
 
 ## Project Highlights
