@@ -1,6 +1,3 @@
-<p align="center">
-  <img src="https://your-website.com/hms-logo.png" alt="Evercare HMS Logo" width="200">
-</p>
 
 <h1 align="center">Evercare HMS - Hospital Management System</h1>
 
